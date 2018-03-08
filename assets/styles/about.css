@@ -1,0 +1,74 @@
+/*
+***css about section***
+*/
+.about {
+	background-color: var(--color-about);
+	color: var(--color-white);
+}
+
+.about .text-about {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 40px 0; 
+}
+
+.about .info {
+	display: flex;
+	padding: 0px 20px 40px 20px;	
+}
+
+.about .info. .about-image img {
+	width: 550px;
+}
+
+.about .info .about-image img:nth-child(2) {
+	display: none;
+}
+
+.about .info .about-info {
+	padding-top: 40px;
+	padding-left: 40px;
+}
+/*
+*** media queries tablet
+*/
+@media screen and (max-width: 1440px) {
+	.about .info .about-image img {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.about .info .about-image {
+		display: flex;
+		align-items: center;
+	}
+
+	.about .info .about-image img {
+		width: 300px;
+		height: auto;
+		float: right;
+	}
+	
+	/*hides image 1 from about-image*/
+	.about .info .about-image img:nth-child(1) {
+		display: none;
+	}
+
+	/*shows image 2 from about image*/
+	.about .info .about-image img:nth-child(2) {
+		display: flex;
+	}
+}
+/*
+*** media queries mobile
+*/
+@media screen and (max-width: 980px) {
+	.about .info .about-image {
+		display: none;
+	}
+	
+	.about .info .about-info {
+		padding: 10px 0px;
+	}
+}

@@ -1,0 +1,80 @@
+/*
+***css book section***
+*/
+.book-container {
+	background-color: var(--color-books);
+	color: var(--color-white);
+	display: flex;
+  	justify-content: center;
+  	flex-direction: row;
+}
+
+.book-grid {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.book {
+	width: 350px;
+	text-align: center;
+	padding: 40px 0;
+	margin-top: 50px;
+}
+
+.book h2 {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.book .book-image {
+	/*puts the transition of the image*/
+  	overflow: hidden;
+  	height: 410px;
+}
+
+.book .book-image img {
+	/*make the transition*/
+	transition: all 0.3s;
+	overflow: hidden;
+}
+
+.book .book-image:hover img {
+	transform: scale(1.1);
+}
+/*
+***** media queries tablet *****
+*/
+@media screen and (max-width: 1280px) {
+	.book {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 1065px) {
+	.book-grid {
+		justify-content: space-evenly;
+	}
+
+	.book {
+		padding-top: 30px;
+	}
+}
+/*
+***** media queries mobile *****
+*/
+@media screen and (max-width: 715px) {
+	.book-grid {
+		flex-direction: column-reverse;
+	}
+	.book {
+		padding: 5px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.book p,
+	.book h2 {
+		display: none;
+	}
+}

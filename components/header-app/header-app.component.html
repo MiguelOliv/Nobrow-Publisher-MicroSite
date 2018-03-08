@@ -1,0 +1,44 @@
+<header>
+<div class="h-menu">
+		<div class="h-menu-icon"><a href=""><svg fill="#FFFFFF" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M4 10h24c1.104 0 2-.896 2-2s-.896-2-2-2H4c-1.104 0-2 .896-2 2s.896 2 2 2zm24 4H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2zm0 8H4c-1.104 0-2 .896-2 2s.896 2 2 2h24c1.104 0 2-.896 2-2s-.896-2-2-2z"/></svg></a></div>
+		<div class="sidenav">
+			<ul class="menu-sidenav">
+			  <li><a href="">welcome</a></li>
+			  <li><a href="#about">about</a></li>
+			  <li><a href="#books">books</a></li>
+			  <li><a href="#contact">contact us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header-container">
+		<div class="text-image">
+			<div class="header-logo"><img src="assets/images/nobrow_icon.png" alt="editors logo"></div>
+			<div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		</div>
+	</div>
+	<div class="menu-container">
+		<div class="menu">
+			<ul class="menu-list">
+				<li ng-repeat="item in $ctrl.mainMenu"><a href="{{item.link}}">{{item.text}}</a></li>
+				
+				<li>
+					<div class="overlay" id="subscribe">
+						<div class="box">
+							<a href="#close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982" width="15" height="15"><path d="M131.804 106.491l75.936-75.936c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.491 81.18 30.554 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.989 6.99-6.989 18.323 0 25.312l75.937 75.936-75.937 75.937c-6.989 6.99-6.989 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0l75.937-75.937 75.937 75.937c6.989 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.322 0-25.312l-75.936-75.936z" data-original="#000000" class="active-path" data-old_color="fill-rule: evenodd clip-rule: evenodd;#EFEBEB" fill="#EFEBEB" fill-rule="evenodd" clip-rule="evenodd"/></svg></a>
+							<div>
+								<input type="email" placeholder="email@email.com" autofocus ng-model="$ctrl.subscribeEmail">
+								<button ng-click="$ctrl.subscribeClickOn()">subscribe</button>
+							</div>
+						</div>
+					</div>
+					<a href="#subscribe">subscribe</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>

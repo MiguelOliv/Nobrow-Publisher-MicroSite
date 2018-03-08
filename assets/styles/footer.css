@@ -1,0 +1,28 @@
+/*
+***css footer section***
+*/
+.footer {
+	background-color: var(--color-footer);
+	color: var(--color-white);
+}
+
+.footer .footer-text {
+	text-align: center;
+	padding: 20px;
+}
+/*
+*** media queries tablet
+*/
+@media screen and (max-width: 1024px) {
+	.footer .footer-text {
+		padding: 10px;
+	}
+}
+/*
+*** media queries mobile
+*/
+@media screen and (max-width: 730px) {
+	.footer .footer-text {
+		padding: 5px;
+	}
+}

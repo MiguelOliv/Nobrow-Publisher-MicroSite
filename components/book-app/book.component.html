@@ -1,0 +1,15 @@
+<article class="book-container" ng-if="$ctrl.hasBooks" id="books">
+	<h2 ng-if="!$ctrl.ready">Loading Books...</h2>
+	 
+		<div class="book-grid" ng-if="$ctrl.hasBooks">
+		<div ng-repeat="book in $ctrl.featureBooks track by $index" class="book">
+			<div class="book-image">
+				<img ng-src="{{book.image}}" alt="Cover book">
+			</div>
+  			<h2>{{book.name}}</h2>
+  			<p>{{book.text}}</p>
+  			<button class="button" ng-click="$ctrl.buyBook($index)">buy</button>
+		</div>
+		
+		</div>
+</article>

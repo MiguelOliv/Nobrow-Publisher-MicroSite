@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myPageApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Miguel Oliveira">
+	<meta name="description" content="A microsite of the Nobrow books publisher">
+	<meta name="keywords" content="web,design,html,css,html5,development">
+	<title>Nobrow Publisher Microsite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/fonts.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/variables.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/header.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/button.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/book.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/about.css">
+	<link rel="stylesheet" href="assets/styles/contact.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/footer.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+	<base href="/">
+</head>
+<body>
+
+	<header-app></header-app>
+
+	<main ng-view></main>
+
+	<footer-app></footer-app>
+
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="config/init.app.js"></script>
+	<script type="text/javascript" src="config/routes.config.js"></script>
+	<script type="text/javascript" src="components/header-app/header-app.component.js"></script>
+	<script type="text/javascript" src="components/header-app/header-app.controller.js"></script>
+	<script type="text/javascript" src="components/header-app/header-app.constant.js"></script>
+	<script type="text/javascript" src="components/footer-app/footer-app.component.js"></script>
+	<script type="text/javascript" src="components/footer-app/footer-app.controller.js"></script>
+	<script type="text/javascript" src="components/book-app/book.component.js"></script>
+	<script type="text/javascript" src="components/book-app/book.controller.js"></script>
+	<script type="text/javascript" src="components/about-app/about.component.js"></script>
+	<script type="text/javascript" src="components/about-app/about.controller.js"></script>
+	<script type="text/javascript" src="pages/homepage/homepage.component.js"></script>
+	<script type="text/javascript" src="pages/homepage/homepage.controller.js"></script>
+	<script type="text/javascript" src="components/contact-app/contact.component.js"></script>
+	<script type="text/javascript" src="components/contact-app/contact.controller.js"></script>
+
+
+</body>
+</html>

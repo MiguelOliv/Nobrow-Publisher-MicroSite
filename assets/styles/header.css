@@ -1,0 +1,226 @@
+/*
+***css header section***
+*/
+/*
+**** Menu svg ****
+*/
+.h-menu {
+	display: none; /*hides h menu*/
+	flex-direction: row-reverse;
+	position: fixed;
+	left: 10px;
+	top: 20px;
+	cursor: pointer;
+	z-index: 1;
+}
+/*
+**** Sidebar ****
+*/
+.sidenav .menu-sidenav {
+	display: none; /*hides the sidebar display block shows it*/
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-menu);
+    position: fixed;
+    /*height: 100%;*/
+    overflow: auto;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sidenav ul.menu-sidenav li a {
+    display: block;
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.sidenav ul.menu-sidenav li a:hover,
+.sidenav ul.menu-sidenav li a:active {
+	background-color: var(--color-link);
+}
+/*
+**** Container with background image ****
+*/
+/*
+/*container with background image*/
+header .header-container {
+	color: var(--color-white);
+	text-align: center;
+	background-image: url('../../assets/images/pic01.jpg');
+	height: 800px;
+	display: flex;
+	justify-content: center;
+	/*paralax effect*/
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*
+**** Container with the text inside the background image ****
+*/
+header .header {
+	display: flex;
+	align-items: center;
+}
+/*
+**** Container with the menu ****
+*/
+header .menu-container {
+	background-color: var(--color-menu);
+	color: var(--color-white);
+	height: 60px; /*manages the height of menu*/
+	padding: 20px 0; /*manages the position of the letters on the menu*/
+	/*display: none;*/
+	justify-content: center;
+	position: fixed; /*for the header sticks within the site body*/
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+/*
+**** Container with the overlay *****
+*/
+header .menu-container .menu-list .overlay{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.5s linear;
+}
+
+header .menu-container .menu-list .overlay:target {
+    opacity: 1;
+    z-index: 2;
+}
+/*
+***** Container of the subscribe box *****
+*/
+header .menu-container .menu-list .overlay .box {
+	width: 400px;
+    height: 100px;
+    background-color: var(--color-menu);
+    margin: auto;
+    margin-top: 100px;
+}
+
+header .overlay .box div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+header .overlay .box input {
+	font-weight: bold;
+	padding: 3px;
+}
+/*
+***** Container of the subscribe button *****
+*/
+
+header .overlay .box button {
+	padding: 10px 30px;
+	font-weight: bold;
+	border-radius: 8px;
+	border: none;
+	background-color: var(--color-about-box);
+	color: var(--color-white);
+	margin-left: 20px;
+}
+/*
+**** Container with the menu list ****
+*/
+header .menu .menu-list{
+	display: flex;
+	justify-content: space-around;
+	height: 40px;/*aligning the hover of the menu list*/
+}
+
+header .menu .menu-list li:hover {
+	border-bottom: 5px solid var(--color-link);
+}
+/*
+**** Header container with the logo & text****
+*/
+header .header-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header .header-container .text-image {
+	text-align: center;
+	margin: 0 200px;
+}
+
+header .header-container .text-image .header-logo {
+	margin-bottom: 50px;
+}
+/*
+***** media queries tablet *****
+*/
+@media screen and (max-width: 1280px) {
+	header .header-container { /*Shorts the height of the header image container*/
+		height: 600px;
+	}
+
+	header .menu-container {
+		height: 40px;
+		padding: 10px 0;
+	}
+
+	header .menu .menu-list{
+		height: 30px;
+	}
+
+	header .menu .menu-list li:hover {
+		border-bottom: 3px solid var(--color-link);
+	}	
+}
+/*
+***** media queries mobile *****
+*/
+@media screen and (max-width: 980px) {
+	header .header-container { /*Shorts the height of the header image container*/
+		height: 400px;
+		overflow: hidden;
+	}
+
+	header .menu-container {
+		display: none;
+	}
+
+	.h-menu {
+		display: flex;
+	}
+
+	.h-menu:hover .sidenav .menu-sidenav { /*shows the side menu*/
+		display: block;
+	}
+	
+	.h-menu:hover .sidenav ul.menu-sidenav li a {
+	    display: block;
+	    color: var(--color-white);
+	    padding: 8px 16px;
+	    text-decoration: none;
+	}
+}
+/*
+***** media queries mobile *****
+*/
+@media screen and (max-width: 650px) {
+	header .header-container .text-image .text {
+		display: none;	
+	}
+}

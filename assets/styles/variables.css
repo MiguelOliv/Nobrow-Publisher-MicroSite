@@ -1,0 +1,27 @@
+/*CSS variaveis*/
+/* exemplo para variaveis
+:root {
+	--dark-background: #2B2D33;
+	--border-background: url('../../assets/images/border.png');
+	--border-background-repeat: repeat-x;
+	--color-green-blue: #00CCCC;
+	--color-white: #FFF;
+	--color-black: #000;
+}
+*/
+:root {
+	--color-white: #FFF;
+	--color-text: #000000;
+	--color-menu: #192B38;
+	--color-books: #22424B;
+	--color-about: #2E5458;
+	--color-contact: #4E7367;
+	--color-link: #7FA68C;
+	--color-button: #637582;
+	--color-button-selected: #A46435;
+	--color-footer: #7FA68C;
+	--color-about-box: #6d8f7f;
+	--color-about-button-select: #88a999;
+	--color-about-box-mob: #608387;
+	--color-contact-form: #2E5458;
+}
